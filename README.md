@@ -18,3 +18,5 @@ Yingjun's Independent study 18SP, with Prof. Weible.
  - week1 to week9 python realization (importing puzzle and solover)
  - week10 to week16 webdesign
  - week1 to week16 report
+
+(3) check pythonanywhere for web design ideas and opportunities.
