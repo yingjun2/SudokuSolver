@@ -20,3 +20,5 @@ Yingjun's Independent study 18SP, with Prof. Weible.
  - week1 to week16 report
 
 (3) check pythonanywhere for web design ideas and opportunities.
+
+(4) try visualize the solver and game ui system.
