@@ -22,3 +22,5 @@ Yingjun's Independent study 18SP, with Prof. Weible.
 (3) check pythonanywhere for web design ideas and opportunities.
 
 (4) try visualize the solver and game ui system.
+
+Find new web design server. (myself.)
