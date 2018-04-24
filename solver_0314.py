@@ -44,3 +44,4 @@ def row_opt(q2):
                     q2.loc[i][k] = new
     return q2
 
+# Not finished.
