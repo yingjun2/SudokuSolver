@@ -24,3 +24,5 @@ Yingjun's Independent study 18SP, with Prof. Weible.
 (4) try visualize the solver and game ui system.
 
 Find new web design server. (myself.)
+
+More information on yingjun.pythonanywhere.com
