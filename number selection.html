@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to input a specific number of sudoku puzzle.</p>
+
+<button onclick="myNumber()">Type a number (1-100,000)</button>
+
+<p id="askForInput"></p>
+
+<script>
+function myNumber() {
+    var number = prompt("Please enter your number (1-10 for now)", "1");
+    if (number != null) {
+        document.getElementById("askForInput").innerHTML =
+        "Hi, my dear user, you've selected Puzzle No." + number + "!";
+    }
+}
+</script>
+
+<p>While the system preparing the puzzle, please take another look at the rules.</p>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+} 
+
+th,td {
+    border: 1px solid black;
+}
+
+table.a {
+    table-layout: auto;
+    width: 180px;    
+}
+
+table.b {
+    table-layout: auto;
+    width: 180px;    
+}
+
+</style>
+</head>
+<body onload="function1()">
+<h1>Welcome to Sudoku Game</h1>
+
+<h2>sudoku puzzle No. 001</h2>
+<table class="a" border="20" bgcolor="grey">
+  <tr bgcolor="lightblue">
+    <th>8</th>
+    <th>5</th>
+    <th> </th>
+    <th bgcolor="yellow"> </th>
+    <th bgcolor="yellow"> </th>
+    <th bgcolor="yellow">2</th>
+    <th>4</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>7</th>
+    <th>2</th>
+    <th> </th>
+    <th bgcolor="yellow"></th>
+    <th bgcolor="yellow"></th>
+    <th bgcolor="yellow"> </th>
+    <th></th>
+    <th> </th>
+    <th>9</th>
+  </tr bgcolor="yellow">
+  <tr bgcolor="lightblue">
+    <th></th>
+    <th> </th>
+    <th>4</th>
+    <th bgcolor="yellow"></th>
+    <th bgcolor="yellow"> </th>
+    <th bgcolor="yellow"></th>
+    <th></th>
+    <th></th>
+    <th> </th>
+  </tr>
+  <tr bgcolor="yellow">
+    <th></th>
+    <th> </th>
+    <th></th>
+    <th bgcolor="lightblue">1</th>
+    <th bgcolor="lightblue"> </th>
+    <th bgcolor="lightblue">7</th>
+    <th></th>
+    <th></th>
+    <th> </th>
+  </tr>
+  <tr bgcolor="yellow">
+    <th>3</th>
+    <th> </th>
+    <th>5</th>
+    <th bgcolor="lightblue"></th>
+    <th bgcolor="lightblue"> </th>
+    <th bgcolor="lightblue"></th>
+    <th>9</th>
+    <th></th>
+    <th> </th>
+  </tr>
+  <tr bgcolor="yellow">
+    <th></th>
+    <th>4 </th>
+    <th></th>
+    <th bgcolor="lightblue"></th>
+    <th bgcolor="lightblue"> </th>
+    <th bgcolor="lightblue"></th>
+    <th></th>
+    <th></th>
+    <th> </th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>1</th>
+    <th> </th>
+    <th>3</th>
+    <th bgcolor="yellow">4</th>
+    <th bgcolor="yellow"> </th>
+    <th bgcolor="yellow">6</th>
+    <th>7</th>
+    <th>8</th>
+    <th> </th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th></th>
+    <th> </th>
+    <th></th>
+    <th bgcolor="yellow"></th>
+    <th bgcolor="yellow">8 </th>
+    <th bgcolor="yellow"></th>
+    <th></th>
+    <th>7</th>
+    <th> </th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th></th>
+    <th> </th>
+    <th></th>
+    <th bgcolor="yellow"></th>
+    <th bgcolor="yellow">3 </th>
+    <th bgcolor="yellow">6</th>
+    <th></th>
+    <th></th>
+    <th>4</th>
+  </tr>
+</table>
+
+
+
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<button onclick="myFunction()">Show solution.</button>
+
+<div id="myDIV">
+<h2>sudoku puzzle No. 001 - solution</h2>
+<table class="b">
+  <colgroup>
+    <col style="background-color: #C0C0C0">
+    <col span="2">
+  </colgroup>
+
+  <tr bgcolor="lightblue">
+    <th>8</th>
+    <th>5</th>
+    <th>9</th>
+    <th bgcolor="yellow">6</th>
+    <th bgcolor="yellow">1</th>
+    <th bgcolor="yellow">2</th>
+    <th>4</th>
+    <th>3</th>
+    <th>7</th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>7</th>
+    <th>2</th>
+    <th>3</th>
+    <th bgcolor="yellow">8</th>
+    <th bgcolor="yellow">5</th>
+    <th bgcolor="yellow">4</th>
+    <th>1</th>
+    <th>6</th>
+    <th>9</th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>1</th>
+    <th>6</th>
+    <th>4</th>
+    <th bgcolor="yellow">3</th>
+    <th bgcolor="yellow">7</th>
+    <th bgcolor="yellow">9</th>
+    <th>5</th>
+    <th>2</th>
+    <th>8</th>
+  </tr>
+  <tr bgcolor="yellow">
+    <th>9</th>
+    <th>8</th>
+    <th>6</th>
+    <th bgcolor="lightblue">1</th>
+    <th bgcolor="lightblue">4</th>
+    <th bgcolor="lightblue">7</th>
+    <th>3</th>
+    <th>5</th>
+    <th>2</th>
+  </tr>
+  <tr bgcolor="yellow">
+    <th>3</th>
+    <th>7</th>
+    <th>5</th>
+    <th bgcolor="lightblue">2</th>
+    <th bgcolor="lightblue">6</th>
+    <th bgcolor="lightblue">8</th>
+    <th>9</th>
+    <th>1</th>
+    <th>4</th>
+  </tr>
+  <tr bgcolor="yellow">
+    <th>2</th>
+    <th>4 </th>
+    <th>1</th>
+    <th bgcolor="lightblue">5</th>
+    <th bgcolor="lightblue">9</th>
+    <th bgcolor="lightblue">3</th>
+    <th>7</th>
+    <th>8</th>
+    <th>6</th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>4</th>
+    <th>3</th>
+    <th>2</th>
+    <th bgcolor="yellow">9</th>
+    <th bgcolor="yellow">8</th>
+    <th bgcolor="yellow">1</th>
+    <th>6</th>
+    <th>7</th>
+    <th>5</th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>6</th>
+    <th>1</th>
+    <th>7</th>
+    <th bgcolor="yellow">4</th>
+    <th bgcolor="yellow">2</th>
+    <th bgcolor="yellow">5</th>
+    <th>8</th>
+    <th>9</th>
+    <th>3</th>
+  </tr>
+  <tr bgcolor="lightblue">
+    <th>5</th>
+    <th>9</th>
+    <th>8</th>
+    <th bgcolor="yellow">7</th>
+    <th bgcolor="yellow">3</th>
+    <th bgcolor="yellow">6</th>
+    <th>2</th>
+    <th>4</th>
+    <th>1</th>
+  </tr>
+</table>
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+<script>
+function function1(){
+    document.getElementById("myDIV") = "none";
+}
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
+</body>
+</html>
