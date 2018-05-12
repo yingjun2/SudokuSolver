@@ -26,3 +26,6 @@ Yingjun's Independent study 18SP, with Prof. Weible.
 Find new web design server. (myself.)
 
 More information on yingjun.pythonanywhere.com
+
+static section finished. Dynamic section in progress.
+Also cpanel in consideration.
