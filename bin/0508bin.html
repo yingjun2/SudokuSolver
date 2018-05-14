@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Yingjun's Game Time - Sudoku</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.min.css" rel="stylesheet">
+
+<!--     <style>
+      a:link {
+          color: green;
+          background-color: white;
+          text-decoration: none;
+      }
+    </style> -->
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        th,td {
+            border: 1px solid black;
+        }
+
+        table.a {
+            table-layout: auto;
+            width: 180px;
+        }
+
+        table.b {
+            table-layout: auto;
+            width: 180px;
+        }
+
+        .wrapper {
+            text-align: center;
+        }
+
+        .button {
+            position: absolute;
+            top: 50%;
+        }
+        #solutionButton { display: flex; justify-content: center; }
+
+    </style>
+  </head>
+
+
+  <body>
+
+
+    <p align="center" style="color:blue; font-size:20px;">Click the button to input a specific number of sudoku puzzle.</p>
+
+    <div class="wrapper">
+        <button onclick="myNumber()">Type a number (1-100,000)</button>
+    </div>
+
+    <p align="center" style="color:blue;font-size:20px;" id="askForInput">Please input the puzzle number.</p>
+
+    <script>
+    function myNumber() {
+        var number = prompt("Please enter your number (1-10 for now)", "1");
+        var text;
+
+        if (number === '1'){
+          text = 'You have select puzzle No.'+number;
+          var a = document.getElementById('puzzletitle').innerHTML = 'sudoku puzzle No. '+number;
+        } else if (number === '2') { 
+          text = 'You have select puzzle No.'+number;
+        } else {
+          text = 'invalid input'
+        }
+
+        if (number != null) {
+            document.getElementById("askForInput").innerHTML =
+            text;
+        }
+
+        if (number === '1'){
+          // var a = document.getElementById('puzzletitle').innerHTML = 'sudoku puzzle No. '+number;
+          // var x = document.getElementById("puzzletable").rows[0].cells;
+          // x[0].innerHTML = "0";
+          var x11 = document.getElementById("cell11").innerHTML = '8';
+          var x12 = document.getElementById("cell12").innerHTML = '5';
+          var x13 = document.getElementById("cell13").innerHTML = '';
+          var x14 = document.getElementById("cell14").innerHTML = '';
+          var x15 = document.getElementById("cell15").innerHTML = '';
+          var x16 = document.getElementById("cell16").innerHTML = '2';
+          var x17 = document.getElementById("cell17").innerHTML = '4';
+          var x18 = document.getElementById("cell18").innerHTML = '';
+          var x19 = document.getElementById("cell19").innerHTML = '';
+          var x21 = document.getElementById("cell21").innerHTML = '7';
+          var x22 = document.getElementById("cell22").innerHTML = '2';
+          var x23 = document.getElementById("cell23").innerHTML = '';
+          var x24 = document.getElementById("cell24").innerHTML = '';
+          var x25 = document.getElementById("cell25").innerHTML = '';
+          var x26 = document.getElementById("cell26").innerHTML = '';
+          var x27 = document.getElementById("cell27").innerHTML = '';
+          var x28 = document.getElementById("cell28").innerHTML = '';
+          var x29 = document.getElementById("cell29").innerHTML = '9';
+          var x31 = document.getElementById("cell31").innerHTML = '';
+          var x32 = document.getElementById("cell32").innerHTML = '';
+          var x33 = document.getElementById("cell33").innerHTML = '';
+          var x34 = document.getElementById("cell34").innerHTML = '4';
+          var x35 = document.getElementById("cell35").innerHTML = '';
+          var x36 = document.getElementById("cell36").innerHTML = '';
+          var x37 = document.getElementById("cell37").innerHTML = '';
+          var x38 = document.getElementById("cell38").innerHTML = '';
+          var x39 = document.getElementById("cell39").innerHTML = '';
+          var x41 = document.getElementById("cell41").innerHTML = '';
+          var x42 = document.getElementById("cell42").innerHTML = '';
+          var x43 = document.getElementById("cell43").innerHTML = '';
+          var x44 = document.getElementById("cell44").innerHTML = '1';
+          var x45 = document.getElementById("cell45").innerHTML = '';
+          var x46 = document.getElementById("cell46").innerHTML = '7';
+          var x47 = document.getElementById("cell47").innerHTML = '';
+          var x48 = document.getElementById("cell48").innerHTML = '';
+          var x49 = document.getElementById("cell49").innerHTML = '';
+          var x51 = document.getElementById("cell51").innerHTML = '3';
+          var x52 = document.getElementById("cell52").innerHTML = '';
+          var x53 = document.getElementById("cell53").innerHTML = '5';
+          var x54 = document.getElementById("cell54").innerHTML = '';
+          var x55 = document.getElementById("cell55").innerHTML = '';
+          var x56 = document.getElementById("cell56").innerHTML = '';
+          var x57 = document.getElementById("cell57").innerHTML = '9';
+          var x58 = document.getElementById("cell58").innerHTML = '';
+          var x59 = document.getElementById("cell59").innerHTML = '';
+          var x61 = document.getElementById("cell61").innerHTML = '';
+          var x62 = document.getElementById("cell62").innerHTML = '4';
+          var x63 = document.getElementById("cell63").innerHTML = '';
+          var x64 = document.getElementById("cell64").innerHTML = '';
+          var x65 = document.getElementById("cell65").innerHTML = '';
+          var x66 = document.getElementById("cell66").innerHTML = '';
+          var x67 = document.getElementById("cell67").innerHTML = '';
+          var x68 = document.getElementById("cell68").innerHTML = '';
+          var x69 = document.getElementById("cell69").innerHTML = '';
+          var x71 = document.getElementById("cell71").innerHTML = '1';
+          var x72 = document.getElementById("cell72").innerHTML = '';
+          var x73 = document.getElementById("cell73").innerHTML = '3';
+          var x74 = document.getElementById("cell74").innerHTML = '4';
+          var x75 = document.getElementById("cell75").innerHTML = '';
+          var x76 = document.getElementById("cell76").innerHTML = '6';
+          var x77 = document.getElementById("cell77").innerHTML = '7';
+          var x78 = document.getElementById("cell78").innerHTML = '8';
+          var x79 = document.getElementById("cell79").innerHTML = '';
+          var x81 = document.getElementById("cell81").innerHTML = '';
+          var x82 = document.getElementById("cell82").innerHTML = '';
+          var x83 = document.getElementById("cell83").innerHTML = '';
+          var x84 = document.getElementById("cell84").innerHTML = '';
+          var x85 = document.getElementById("cell85").innerHTML = '8';
+          var x86 = document.getElementById("cell86").innerHTML = '';
+          var x87 = document.getElementById("cell87").innerHTML = '';
+          var x88 = document.getElementById("cell88").innerHTML = '7';
+          var x89 = document.getElementById("cell89").innerHTML = '';
+          var x91 = document.getElementById("cell91").innerHTML = '';
+          var x92 = document.getElementById("cell92").innerHTML = '';
+          var x93 = document.getElementById("cell93").innerHTML = '';
+          var x94 = document.getElementById("cell94").innerHTML = '';
+          var x95 = document.getElementById("cell95").innerHTML = '3';
+          var x96 = document.getElementById("cell96").innerHTML = '6';
+          var x97 = document.getElementById("cell97").innerHTML = '';
+          var x98 = document.getElementById("cell98").innerHTML = '';
+          var x99 = document.getElementById("cell99").innerHTML = '4';
+        }
+        
+    }
+    </script>
+
+    <p align="center" style="color:red; font-size:20px;">While the system preparing the puzzle, please take another look at the rules.</p>
+
+    <h1 align="center">Welcome to Sudoku Game</h1>
+
+    <h2 id = 'puzzletitle' align="center">sudoku puzzle No. ?</h2>
+    <table id = 'puzzletable' align="center" class="a" border="20" bgcolor="grey">
+      <tr bgcolor="lightblue">
+        <th id = 'cell11'>?</th>
+        <th id = 'cell12'>?</th>
+        <th id = 'cell13'>?</th>
+        <th id = 'cell14' bgcolor="yellow">?</th>
+        <th id = 'cell15' bgcolor="yellow">?</th>
+        <th id = 'cell16' bgcolor="yellow">?</th>
+        <th id = 'cell17'>?</th>
+        <th id = 'cell18'>?</th>
+        <th id = 'cell19'>?</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th id = 'cell21'>?</th>
+        <th id = 'cell22'>?</th>
+        <th id = 'cell23'>?</th>
+        <th id = 'cell24' bgcolor="yellow">?</th>
+        <th id = 'cell25' bgcolor="yellow">?</th>
+        <th id = 'cell26' bgcolor="yellow">?</th>
+        <th id = 'cell27'>?</th>
+        <th id = 'cell28'>?</th>
+        <th id = 'cell29'>?</th>
+      </tr bgcolor="yellow">
+      <tr bgcolor="lightblue">
+        <th id = 'cell31'>?</th>
+        <th id = 'cell32'>?</th>
+        <th id = 'cell33'>?</th>
+        <th id = 'cell34' bgcolor="yellow">?</th>
+        <th id = 'cell35' bgcolor="yellow">?</th>
+        <th id = 'cell36' bgcolor="yellow">?</th>
+        <th id = 'cell37'>?</th>
+        <th id = 'cell38'>?</th>
+        <th id = 'cell39'>?</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th id = 'cell41'>?</th>
+        <th id = 'cell42'>?</th>
+        <th id = 'cell43'>?</th>
+        <th id = 'cell44' bgcolor="lightblue">?</th>
+        <th id = 'cell45' bgcolor="lightblue">?</th>
+        <th id = 'cell46' bgcolor="lightblue">?</th>
+        <th id = 'cell47'>?</th>
+        <th id = 'cell48'>?</th>
+        <th id = 'cell49'>?</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th id = 'cell51'>?</th>
+        <th id = 'cell52'>?</th>
+        <th id = 'cell53'>?</th>
+        <th id = 'cell54' bgcolor="lightblue">?</th>
+        <th id = 'cell55' bgcolor="lightblue">?</th>
+        <th id = 'cell56' bgcolor="lightblue">?</th>
+        <th id = 'cell57'>?</th>
+        <th id = 'cell58'>?</th>
+        <th id = 'cell59'>?</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th id = 'cell61'>?</th>
+        <th id = 'cell62'>?</th>
+        <th id = 'cell63'>?</th>
+        <th id = 'cell64' bgcolor="lightblue">?</th>
+        <th id = 'cell65' bgcolor="lightblue">?</th>
+        <th id = 'cell66' bgcolor="lightblue">?</th>
+        <th id = 'cell67'>?</th>
+        <th id = 'cell68'>?</th>
+        <th id = 'cell69'>?</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th id = 'cell71'>?</th>
+        <th id = 'cell72'>?</th>
+        <th id = 'cell73'>?</th>
+        <th id = 'cell74' bgcolor="yellow">?</th>
+        <th id = 'cell75' bgcolor="yellow">?</th>
+        <th id = 'cell76' bgcolor="yellow">?</th>
+        <th id = 'cell77'>?</th>
+        <th id = 'cell78'>?</th>
+        <th id = 'cell79'>?</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th id = 'cell81'>?</th>
+        <th id = 'cell82'>?</th>
+        <th id = 'cell83'>?</th>
+        <th id = 'cell84' bgcolor="yellow">?</th>
+        <th id = 'cell85' bgcolor="yellow">?</th>
+        <th id = 'cell86' bgcolor="yellow">?</th>
+        <th id = 'cell87'>?</th>
+        <th id = 'cell88'>?</th>
+        <th id = 'cell89'>?</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th id = 'cell91'>?</th>
+        <th id = 'cell92'>?</th>
+        <th id = 'cell93'>?</th>
+        <th id = 'cell94' bgcolor="yellow">?</th>
+        <th id = 'cell95' bgcolor="yellow">?</th>
+        <th id = 'cell96' bgcolor="yellow">?</th>
+        <th id = 'cell97'>?</th>
+        <th id = 'cell98'>?</th>
+        <th id = 'cell99'>?</th>
+      </tr>
+    </table>
+
+
+    <p align="center">Click the "Show solution" button to toggle between hiding and showing the solution:</p>
+
+    <div class="wrapper">
+        <button onclick="myFunction()">Show solution.</button>
+    </div>
+
+
+    <!--<div class="wrapper">-->
+    <!--    <button class="button">Button</button>-->
+    <!--</div>-->
+
+
+    <div id="solutionButton" style="display:none;">
+    <h2 align="center">sudoku puzzle No. 001 - solution</h2>
+    <table align="center" class="b">
+      <colgroup>
+        <col style="background-color: #C0C0C0">
+        <col span="2">
+      </colgroup>
+
+      <tr bgcolor="lightblue">
+        <th>8</th>
+        <th>5</th>
+        <th>9</th>
+        <th bgcolor="yellow">6</th>
+        <th bgcolor="yellow">1</th>
+        <th bgcolor="yellow">2</th>
+        <th>4</th>
+        <th>3</th>
+        <th>7</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th>7</th>
+        <th>2</th>
+        <th>3</th>
+        <th bgcolor="yellow">8</th>
+        <th bgcolor="yellow">5</th>
+        <th bgcolor="yellow">4</th>
+        <th>1</th>
+        <th>6</th>
+        <th>9</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th>1</th>
+        <th>6</th>
+        <th>4</th>
+        <th bgcolor="yellow">3</th>
+        <th bgcolor="yellow">7</th>
+        <th bgcolor="yellow">9</th>
+        <th>5</th>
+        <th>2</th>
+        <th>8</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th>9</th>
+        <th>8</th>
+        <th>6</th>
+        <th bgcolor="lightblue">1</th>
+        <th bgcolor="lightblue">4</th>
+        <th bgcolor="lightblue">7</th>
+        <th>3</th>
+        <th>5</th>
+        <th>2</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th>3</th>
+        <th>7</th>
+        <th>5</th>
+        <th bgcolor="lightblue">2</th>
+        <th bgcolor="lightblue">6</th>
+        <th bgcolor="lightblue">8</th>
+        <th>9</th>
+        <th>1</th>
+        <th>4</th>
+      </tr>
+      <tr bgcolor="yellow">
+        <th>2</th>
+        <th>4 </th>
+        <th>1</th>
+        <th bgcolor="lightblue">5</th>
+        <th bgcolor="lightblue">9</th>
+        <th bgcolor="lightblue">3</th>
+        <th>7</th>
+        <th>8</th>
+        <th>6</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th>4</th>
+        <th>3</th>
+        <th>2</th>
+        <th bgcolor="yellow">9</th>
+        <th bgcolor="yellow">8</th>
+        <th bgcolor="yellow">1</th>
+        <th>6</th>
+        <th>7</th>
+        <th>5</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th>6</th>
+        <th>1</th>
+        <th>7</th>
+        <th bgcolor="yellow">4</th>
+        <th bgcolor="yellow">2</th>
+        <th bgcolor="yellow">5</th>
+        <th>8</th>
+        <th>9</th>
+        <th>3</th>
+      </tr>
+      <tr bgcolor="lightblue">
+        <th>5</th>
+        <th>9</th>
+        <th>8</th>
+        <th bgcolor="yellow">7</th>
+        <th bgcolor="yellow">3</th>
+        <th bgcolor="yellow">6</th>
+        <th>2</th>
+        <th>4</th>
+        <th>1</th>
+      </tr>
+    </table>
+    </div>
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("solutionButton");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    </script>
+
+  </body>
+
+</html>
